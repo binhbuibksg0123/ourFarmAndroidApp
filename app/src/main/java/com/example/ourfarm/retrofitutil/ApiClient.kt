@@ -9,7 +9,7 @@ import retrofit2.http.Headers
 class ApiClient {
     companion object{
 
-        val BASE_URL:String = "http://192.168.0.113/apiourfarm/users/"
+        val BASE_URL:String = "jamess-macbook-pro.local/api_ourfarm/"
         lateinit var retrofit: Retrofit
         fun getApiClient():Retrofit?{
             if (!this::retrofit.isInitialized){

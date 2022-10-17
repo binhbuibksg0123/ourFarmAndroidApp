@@ -7,7 +7,7 @@ import retrofit2.create
 
 object RetrofitClient {
 
-    private const val BASE_URL = "http://192.168.0.113/apiourfarm/"
+    private const val BASE_URL = "http://192.168.0.107/api_ourfarm/"
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val original = chain.request()

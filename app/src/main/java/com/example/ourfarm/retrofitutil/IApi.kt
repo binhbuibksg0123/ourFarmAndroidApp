@@ -9,6 +9,6 @@ import retrofit2.http.POST
 
 interface IApi {
     @FormUrlEncoded
-    @POST("/")
+    @POST("users")
     fun performUserLogin(@Field("username")username: String, @Field("password")password: String):Call<APIResponse>
 }

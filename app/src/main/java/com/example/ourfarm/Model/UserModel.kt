@@ -3,6 +3,7 @@ package com.example.ourfarm.Model
 import android.text.TextUtils
 import android.util.Log
 import android.util.Patterns
+import android.widget.Toast
 import com.example.ourfarm.retrofitutil.ApiClient
 import com.example.ourfarm.retrofitutil.IApi
 import com.example.ourfarm.retrofitutil.RetrofitClient
@@ -34,14 +35,5 @@ class UserModel (override val email: String,override val password: String): IUse
             }
             else return 2
         }
-    }
-
-    override fun callLoginApi(): String{
-        var result: String = "NULL"
-        RetrofitClient.instance.performUserLogin(email,password)
-            .enqueue(object: Callback<APIResponse>){
-                
-            }
-        return result
     }
 }

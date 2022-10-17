@@ -5,5 +5,4 @@ interface IUserModel {
     val password: String
     fun validPassword(): Int
     fun validEmail(): Int
-    fun callLoginApi(): String
 }

@@ -3,93 +3,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2b1b3d"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="350dp"
-        android:layout_height="600dp"
-        android:layout_centerInParent="true"
-        android:background="@color/white">
+
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:background="@color/mainColor"
+            android:padding="5dp">
 
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/logoAppLogin"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
-                android:src="@mipmap/logo" />
-
-            <TextView
-                android:id="@+id/appNameLogin"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/logoAppLogin"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/architects_daughter"
-                android:text="ourFarm"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                android:textColor="#35254d"/>
+                android:layout_centerInParent="true">
 
-            <EditText
-                android:id="@+id/emailLogin"
-                android:layout_width="275dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/appNameLogin"
-                android:hint="Email..."
-                android:drawableStart="@drawable/ic_baseline_mail_outline_24"
-                android:drawablePadding="5dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logoAppMain"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@mipmap/logo" />
 
-            <EditText
-                android:id="@+id/passwordLogin"
-                android:layout_width="275dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/emailLogin"
-                android:hint="Password..."
-                android:layout_marginTop="15dp"
-                android:drawableStart="@drawable/ic_baseline_lock_open_24"
-                android:drawablePadding="5dp"
-                android:inputType="textPassword"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Error"
-                android:id="@+id/errorTv"
-                android:layout_below="@+id/passwordLogin"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:textColor="#FF0000"
-                android:visibility="invisible"
-                />
-            <Button
-                android:id="@+id/loginBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_below="@+id/passwordLogin"
-                android:text="Login"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:background="#38c294"
-                android:textColor="#FFFFFF"
-
-                />
-
-            <TextView
-                android:id="@+id/forgotPass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/loginBtn"
-                android:text="Forgot password?"
-                android:layout_centerHorizontal="true"
-                android:textColor="#008000"
-                android:layout_marginTop="5dp"/>
+                <TextView
+                    android:id="@+id/appNameLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/logoAppMain"
+                    android:fontFamily="@font/architects_daughter"
+                    android:text="ourFarm"
+                    android:textColor="#C7C7C5"
+                    android:textSize="38dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/header"
+            android:background="#F1F2F5"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:id="@+id/main_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardview_light_background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mainColor"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Copyright Socialism Team / ourFarm"
+                android:textColor="#C7C7C5"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
 </RelativeLayout>
